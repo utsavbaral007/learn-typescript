@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import HeaderMessage from "./components/HeaderMessage";
 import Button from "./components/Button";
 import Input from "./components/Input";
+import TickedBooking from "./components/TickedBooking";
 
 function App() {
   const [username, setUsername] = useState<string>("Utsav Baral");
@@ -11,8 +12,9 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(true);
 
   return (
-    <div className="h-screen w-full flex flex-col justify-center items-center">
-      <Greet
+    <div className="w-full flex flex-col justify-center items-center">
+      <TickedBooking />
+      {/* <Greet
         username={username}
         messageLength={messageLength}
         loggedIn={loggedIn}
@@ -23,7 +25,7 @@ function App() {
       <Button
         handleClick={(e, id) => console.log("Button clicked with event", e, id)}
       />
-      <Input handleChange={(e) => setUsername(e.target.value)} />
+      <Input handleChange={(e) => setUsername(e.target.value)} /> */}
     </div>
   );
 }
