@@ -17,7 +17,7 @@ function App() {
         messageLength={messageLength}
         loggedIn={loggedIn}
       />
-      <Header>
+      <Header styles={{ border: "1px solid", padding: "1rem" }}>
         <HeaderMessage />
       </Header>
       <Button

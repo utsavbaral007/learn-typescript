@@ -1,11 +1,12 @@
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 interface props {
   children: ReactNode;
+  styles: CSSProperties
 }
 
-const Header = ({ children }: props) => {
-  return <div>{children}</div>;
+const Header = ({ children, styles }: props) => {
+  return <div style={styles}>{children}</div>;
 };
 
 export default Header;
