@@ -5,6 +5,7 @@ import HeaderMessage from "./components/HeaderMessage";
 import Button from "./components/Button";
 import Input from "./components/Input";
 import TickedBooking from "./components/TickedBooking";
+import MultipleDropdown from "./components/MultipleDropdown";
 
 function App() {
   const [username, setUsername] = useState<string>("Utsav Baral");
@@ -12,8 +13,9 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(true);
 
   return (
-    <div className="w-full flex flex-col justify-center items-center">
-      <TickedBooking />
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <MultipleDropdown />
+      {/* <TickedBooking /> */}
       {/* <Greet
         username={username}
         messageLength={messageLength}
