@@ -21,10 +21,6 @@ const MultipleDropdown = () => {
 
   const [selectedCountry, setSelectedCountry] = useState<string>("NP");
 
-  const filteredCities = countries.filter(
-    (data) => data.code === selectedCountry
-  );
-
   return (
     <div>
       <select
@@ -43,13 +39,13 @@ const MultipleDropdown = () => {
         onChange={(e) => setSelectedCountry(e.target.value)}
         className="border-2 outline-none border-gray-400 px-2 py-1 rounded-lg"
       >
-        {filteredCities?.map((data, _) =>
-          data.cities.map((city, index) => (
+        {countries
+          .filter((data) => data.code === selectedCountry)[0]
+          .cities.map((city, index) => (
             <option key={index} value={city}>
               {city}
             </option>
-          ))
-        )}
+          ))}
       </select>
     </div>
   );
