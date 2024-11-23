@@ -7,6 +7,7 @@ import Input from "./components/Input";
 import TickedBooking from "./components/TickedBooking";
 import MultipleDropdown from "./components/MultipleDropdown";
 import DeleteList from "./components/DeleteList";
+import Todo from "./components/Todo";
 
 function App() {
   const [username, setUsername] = useState<string>("Utsav Baral");
@@ -15,7 +16,8 @@ function App() {
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
-      <DeleteList />
+      <Todo />
+      {/* <DeleteList /> */}
       {/* <MultipleDropdown /> */}
       {/* <TickedBooking /> */}
       {/* <Greet
