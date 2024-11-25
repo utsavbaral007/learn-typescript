@@ -15,11 +15,11 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(true);
 
   return (
-    <div className="w-full h-screen flex flex-col justify-center items-center">
-      <Todo />
+    <div className="w-full h-auto flex flex-col justify-center items-center">
+      {/* <Todo /> */}
       {/* <DeleteList /> */}
       {/* <MultipleDropdown /> */}
-      {/* <TickedBooking /> */}
+      <TickedBooking />
       {/* <Greet
         username={username}
         messageLength={messageLength}
