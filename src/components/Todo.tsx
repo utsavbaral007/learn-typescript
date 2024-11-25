@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Todo = () => {
   interface TodoItem {
@@ -30,6 +30,19 @@ const Todo = () => {
   const removeTodo = (id: number) => {
     setTodoList(todoList.filter((data) => data.id !== id));
   };
+
+  useEffect(() => {
+    const todoData: TodoItem[] = JSON.parse(
+      localStorage.getItem("todoItems") || "[]"
+    );
+    if (todoData && todoData.length > 0) {
+      setTodoList(todoData);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("todoItems", JSON.stringify(todoList));
+  }, [todoList]);
 
   return (
     <>
