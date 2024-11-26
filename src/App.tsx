@@ -8,6 +8,7 @@ import TickedBooking from "./components/TickedBooking";
 import MultipleDropdown from "./components/MultipleDropdown";
 import DeleteList from "./components/DeleteList";
 import Todo from "./components/Todo";
+import Debounce from "./components/Debounce";
 
 function App() {
   const [username, setUsername] = useState<string>("Utsav Baral");
@@ -15,11 +16,12 @@ function App() {
   const [loggedIn, setLoggedIn] = useState<boolean>(true);
 
   return (
-    <div className="w-full h-auto flex flex-col justify-center items-center">
+    <div className="w-full h-screen flex flex-col justify-center items-center">
+      <Debounce />
       {/* <Todo /> */}
       {/* <DeleteList /> */}
       {/* <MultipleDropdown /> */}
-      <TickedBooking />
+      {/* <TickedBooking /> */}
       {/* <Greet
         username={username}
         messageLength={messageLength}
